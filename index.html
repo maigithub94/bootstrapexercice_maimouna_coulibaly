@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title>Mon site avec bootstrap</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -93,6 +95,186 @@
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-6 col-md-4 d-flex">
+      <div class="card" style="width: 18rem;">
+        <img src="./img/perroquetjaune.jpg" class="card-img-top" alt="perroquet">
+        <div class="card-body">
+          <h5 class="card-title">Le perroquet</h5>
+          <p class="card-text" style=" text-align: justify;"> Le Perroquet, quelle qu’en soit l’espèce, fascine l’être
+            humain depuis toujours. La
+            beauté de son plumage, sa
+            capacité à imiter les sons et la parole et son comportement tant vis-à-vis de l’Homme que de ses congénères
+            sont quelques unes des particularités qui en font un animal dont l’élevage (ne s’agissant que des espèces
+            autorisées et non menacées) et l’observation sont extrêmement plaisants. Les perroquets sont de très
+            agréables
+            compagnons qui demandent soin, respect et affection.
+          </p>
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#perroquetModal">voir le
+            perroquet</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 d-flex">
+      <div class="card" style="width: 18rem;">
+        <img src="./img/colombe.jpeg" class="card-img-top" alt="colombe">
+        <div class="card-body">
+          <h5 class="card-title">La colombe</h5>
+          <p class="card-text" style="text-align: justify;">La colombe est un bel oiseau souvent synonyme de paix, de
+            pureté et de beauté. Élégante
+            et
+            élancée, la colombe est musclée et apprécie de voler chaque jour dans une volière de grande taille.
+            Grégaire,
+            elle aime le contact de ses congénères, mais elle est un oiseau relativement sale qui produit tout un tas de
+            déchets.
+          </p>
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#colombeModal">voir la Colombe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 d-flex">
+      <div class="card" style="width: 18rem;">
+        <img src="./img/hibou.jpg" class="card-img-top" alt="hibou">
+        <div class="card-body">
+          <h5 class="card-title">Le hibou</h5>
+          <p class="card-text" style="text-align: justify;">Le hibou est un rapace nocturne très répandu en France. Tout
+            comme sa cousine la
+            chouette,
+            avec qui il ne faut pas le confondre, le hibou est un animal protégé dans notre pays. Certaines espèces de
+            hiboux migrent pendant les mois d'hiver, d'autres non.
+          </p>
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hibouModal">voir le Hibou</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="perroquetModal" tabindex="-1" aria-labelledby="perroquetModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="perroquetModalLabel">Le Perroquet</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./img/perroquetjaune.jpg" alt="perroquet">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="colombeModal" tabindex="-1" aria-labelledby="colombeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="colombeModalLabel">La Colombe</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="fermer"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./img/colombe.jpeg" alt="colombe">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="hibouModal" tabindex="-1" aria-labelledby="hibouModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="hibouModalLabel">Le Hibou</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="fermer"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./img/hibou.jpg" alt="hibou">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div >
+    <h3>les oiseaux </h3>
+    <div id="carouselPerroquet" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/perroquet_3-612x612-800x600.jpg" class="d-block w-100" alt="perroquet">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/Perroquet_Ara_Macao_157318289_gi_A-800x600.jpg" class="d-block w-100" alt="perroquet">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/perroquet2-800x600.jpg" class="d-block w-100" alt="perroquet">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerroquet" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">précédant</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselPerroquet" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">suivant</span>
+      </button>
+    </div>
+
+    <div id="carouselColombe" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/colombe-diamant-084143-800x600.jpg" class="d-block w-100" alt="colombe">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/colombe1-800x600.jpeg" class="d-block w-100" alt="colombe">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/Colombe3-800x600.jpeg" class="d-block w-100" alt="colombe">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselColombe" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">précédant</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselColombe" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">suivant</span>
+      </button>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div id="carouselHibou" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/perroquet_3-612x612-800x600.jpg" class="d-block w-100" alt="hibou">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/Perroquet_Ara_Macao_157318289_gi_A-800x600.jpg" class="d-block w-100" alt="hibou">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/perroquet2-800x600.jpg" class="d-block w-100" alt="hibou">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHibou" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">précédant</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselHibou" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">suivant</span>
+        </button>
+      </div>
+    </div>
+  </div>
   <script>
     const handleLogin = () => {
       console.log("Email : " + document.getElementById("login-email").value);
@@ -106,87 +288,6 @@
     };
     document.getElementById("register-button").addEventListener("click", handleRegister);
   </script>
-  <div class="row">
-    <div class="col-6 col-md-4 d-flex">
-      <div class="card" style="width: 18rem;">
-        <img src="./perroquet.jpg" class="card-img-top" alt="perroquet">
-        <div class="card-body">
-          <h5 class="card-title">Le perroquet</h5>
-          <p class="card-text"> Le Perroquet, quelle qu’en soit l’espèce, fascine l’être humain depuis toujours. La beauté de son plumage, sa
-            capacité à imiter les sons et la parole et son comportement tant vis-à-vis de l’Homme que de ses congénères
-            sont quelques unes des particularités qui en font un animal dont l’élevage (ne s’agissant que des espèces
-            autorisées et non menacées) et l’observation sont extrêmement plaisants. Les perroquets sont de très agréables
-            compagnons qui demandent soin, respect et affection.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-6 col-md-4 d-flex">
-      <div class="card" style="width: 18rem;">
-        <img src="./colombe.jpeg" class="card-img-top" alt="colombe">
-        <div class="card-body">
-          <h5 class="card-title">La colombe</h5>
-          <p class="card-text">La colombe est un bel oiseau souvent synonyme de paix, de pureté et de beauté. Élégante et
-            élancée, la colombe est musclée et apprécie de voler chaque jour dans une volière de grande taille. Grégaire,
-            elle aime le contact de ses congénères, mais elle est un oiseau relativement sale qui produit tout un tas de
-            déchets.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-6 col-md-4 d-flex">
-      <div class="card" style="width: 18rem;">
-        <img src="./hibou.jpeg" class="card-img-top" alt="hibou">
-        <div class="card-body">
-          <h5 class="card-title">Le hibou</h5>
-          <p class="card-text">Le hibou est un rapace nocturne très répandu en France. Tout comme sa cousine la chouette,
-            avec qui il ne faut pas le confondre, le hibou est un animal protégé dans notre pays. Certaines espèces de
-            hiboux migrent pendant les mois d'hiver, d'autres non.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-<!--
-    <div class="card" style="width: 18rem;">
-      <img src="./perroquet.jpg" class="card-img-top" alt="perroquet">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          Le Perroquet, quelle qu’en soit l’espèce, fascine l’être humain depuis toujours. La beauté de son plumage, sa
-          capacité à imiter les sons et la parole et son comportement tant vis-à-vis de l’Homme que de ses congénères
-          sont quelques unes des particularités qui en font un animal dont l’élevage (ne s’agissant que des espèces
-          autorisées et non menacées) et l’observation sont extrêmement plaisants. Les perroquets sont de très agréables
-          compagnons qui demandent soin, respect et affection.
-          .</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="./colombe.jpeg" class="card-img-top" alt="colombe">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">La colombe est un bel oiseau souvent synonyme de paix, de pureté et de beauté. Élégante et
-          élancée, la colombe est musclée et apprécie de voler chaque jour dans une volière de grande taille. Grégaire,
-          elle aime le contact de ses congénères, mais elle est un oiseau relativement sale qui produit tout un tas de
-          déchets.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="./hibou.jpeg" class="card-img-top" alt="hibou">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Le hibou est un rapace nocturne très répandu en France. Tout comme sa cousine la chouette,
-          avec qui il ne faut pas le confondre, le hibou est un animal protégé dans notre pays. Certaines espèces de
-          hiboux migrent pendant les mois d'hiver, d'autres non.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
--->
-
 </body>
 
 </html>
