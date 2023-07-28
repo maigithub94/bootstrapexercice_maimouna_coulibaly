@@ -1,55 +1,192 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-    <script href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="utf-8" />
+  <title>Mon site avec bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Acceuil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Profil</a>
-                    </li>
-                    <li class="nav-item">
-                        <!-- Button trigger modal -->
-                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Connexion</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="inscription.html">Inscription</a>
-                    </li>
-    
-                </ul>
-    
-            </div>
-        </div>
-    </nav>
-    <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Menu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profil</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#inscriptionModal">Inscription</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#connexionModal">Connexion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="inscriptionModal" tabindex="-1" aria-labelledby="inscriptionModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="inscriptionModalLabel">Inscription</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
+        <form action="">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="register-email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="register-email">
+            </div>
+            <div class="mb-3">
+              <label for="register-password" class="form-label">Mot de passe</label>
+              <input type="password" class="form-control" id="register-password">
+            </div>
+            <div class="mb-3">
+              <label for="register-retype-password" class="form-label">Retaper son mot de passe</label>
+              <input type="password" class="form-control" id="register-retype-password">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="register-button">Envoyer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="connexionModal" tabindex="-1" aria-labelledby="connexionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="connexionModalLabel">Connexion</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+        <form action="">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="login-email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="login-email">
+            </div>
+            <div class="mb-3">
+              <label for="login-password" class="form-label">Mot de passe</label>
+              <input type="password" class="form-control" id="login-password">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="login-button">Envoyer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    const handleLogin = () => {
+      console.log("Email : " + document.getElementById("login-email").value);
+      console.log("Password : " + document.getElementById("login-password").value);
+    };
+    document.getElementById("login-button").addEventListener("click", handleLogin);
+    const handleRegister = () => {
+      console.log("Email : " + document.getElementById("register-email").value);
+      console.log("Password : " + document.getElementById("register-password").value);
+      console.log("Retype Password : " + document.getElementById("register-retype-password").value);
+    };
+    document.getElementById("register-button").addEventListener("click", handleRegister);
+  </script>
+  <div class="row">
+    <div class="col-6 col-md-4 d-flex">
+      <div class="card" style="width: 18rem;">
+        <img src="./perroquet.jpg" class="card-img-top" alt="perroquet">
+        <div class="card-body">
+          <h5 class="card-title">Le perroquet</h5>
+          <p class="card-text"> Le Perroquet, quelle qu’en soit l’espèce, fascine l’être humain depuis toujours. La beauté de son plumage, sa
+            capacité à imiter les sons et la parole et son comportement tant vis-à-vis de l’Homme que de ses congénères
+            sont quelques unes des particularités qui en font un animal dont l’élevage (ne s’agissant que des espèces
+            autorisées et non menacées) et l’observation sont extrêmement plaisants. Les perroquets sont de très agréables
+            compagnons qui demandent soin, respect et affection.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 d-flex">
+      <div class="card" style="width: 18rem;">
+        <img src="./colombe.jpeg" class="card-img-top" alt="colombe">
+        <div class="card-body">
+          <h5 class="card-title">La colombe</h5>
+          <p class="card-text">La colombe est un bel oiseau souvent synonyme de paix, de pureté et de beauté. Élégante et
+            élancée, la colombe est musclée et apprécie de voler chaque jour dans une volière de grande taille. Grégaire,
+            elle aime le contact de ses congénères, mais elle est un oiseau relativement sale qui produit tout un tas de
+            déchets.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 d-flex">
+      <div class="card" style="width: 18rem;">
+        <img src="./hibou.jpeg" class="card-img-top" alt="hibou">
+        <div class="card-body">
+          <h5 class="card-title">Le hibou</h5>
+          <p class="card-text">Le hibou est un rapace nocturne très répandu en France. Tout comme sa cousine la chouette,
+            avec qui il ne faut pas le confondre, le hibou est un animal protégé dans notre pays. Certaines espèces de
+            hiboux migrent pendant les mois d'hiver, d'autres non.</p>
         </div>
       </div>
     </div>
   </div>
-  
-    
+
+
+<!--
+    <div class="card" style="width: 18rem;">
+      <img src="./perroquet.jpg" class="card-img-top" alt="perroquet">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Le Perroquet, quelle qu’en soit l’espèce, fascine l’être humain depuis toujours. La beauté de son plumage, sa
+          capacité à imiter les sons et la parole et son comportement tant vis-à-vis de l’Homme que de ses congénères
+          sont quelques unes des particularités qui en font un animal dont l’élevage (ne s’agissant que des espèces
+          autorisées et non menacées) et l’observation sont extrêmement plaisants. Les perroquets sont de très agréables
+          compagnons qui demandent soin, respect et affection.
+          .</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="./colombe.jpeg" class="card-img-top" alt="colombe">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">La colombe est un bel oiseau souvent synonyme de paix, de pureté et de beauté. Élégante et
+          élancée, la colombe est musclée et apprécie de voler chaque jour dans une volière de grande taille. Grégaire,
+          elle aime le contact de ses congénères, mais elle est un oiseau relativement sale qui produit tout un tas de
+          déchets.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="./hibou.jpeg" class="card-img-top" alt="hibou">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Le hibou est un rapace nocturne très répandu en France. Tout comme sa cousine la chouette,
+          avec qui il ne faut pas le confondre, le hibou est un animal protégé dans notre pays. Certaines espèces de
+          hiboux migrent pendant les mois d'hiver, d'autres non.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+-->
 
 </body>
+
 </html>
